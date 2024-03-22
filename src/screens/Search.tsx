@@ -2,15 +2,14 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import IconSearch from '../icons/search.svg';
 
 
 const Search = () => {
   return (
     <SafeAreaView style={styles.container}>
         <Text>Search</Text>
-        <Button icon="camera">
-          Press me
-        </Button>
+        <IconSearch width={100} height={100} />
     </SafeAreaView>
   );
 }

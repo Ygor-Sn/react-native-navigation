@@ -7,6 +7,12 @@ import Search from '../screens/Search';
 import Notifications from '../screens/Notifications';
 import Profile from '../screens/Profile';
 
+import IconHome from '../icons/home.svg';
+import IconNext from '../icons/fire.svg';
+import IconSearch from '../icons/search.svg';
+import IconNotifications from '../icons/notifications.svg';
+import IconProfile from '../icons/profile.svg';
+
 const Tab = createMaterialBottomTabNavigator();
 
 export const BottomNavigation = () => {
@@ -18,7 +24,7 @@ export const BottomNavigation = () => {
         component={Home}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons  name="home" color={color} size={24} />
+            <IconHome fill={color} width={24} height={24} />
           ),
         }}
       />
@@ -27,7 +33,7 @@ export const BottomNavigation = () => {
         component={Next}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="fire" color={color} size={24} />
+            <IconNext fill={color} width={24} height={24} />
           ),
         }}
       />
@@ -36,7 +42,7 @@ export const BottomNavigation = () => {
         component={Search}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="magnify" color={color} size={24} />
+            <IconSearch fill={color} width={24} height={24} />
           ),
         }}
       />
@@ -45,7 +51,7 @@ export const BottomNavigation = () => {
         component={Notifications}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={24} />
+            <IconNotifications fill={color} width={24} height={24} />
           ),
         }}
       />
@@ -54,7 +60,7 @@ export const BottomNavigation = () => {
         component={Profile}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={24} />
+            <IconProfile fill={color} width={24} height={24} />
           ),
         }}
       />
