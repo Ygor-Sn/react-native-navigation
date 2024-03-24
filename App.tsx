@@ -1,22 +1,14 @@
-import { StyleSheet } from 'react-native';
-import { PaperProvider } from 'react-native-paper';
+import { MD3DarkTheme } from 'react-native-paper';
 import { BottomNavigation } from './src/components/BottomNavigation';
-
+import { ThemeProvider } from 'react-native-paper';
 
 const App = () => {
       
   return (
-    <PaperProvider>
-        <BottomNavigation />
-    </PaperProvider>
+    <ThemeProvider theme={MD3DarkTheme}>
+      <BottomNavigation />
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-  },
-});
-
 
 export default App
