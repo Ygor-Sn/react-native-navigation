@@ -3,7 +3,7 @@ import {useColorScheme} from 'react-native';
 import {
   Provider as PaperProvider,
   MD3DarkTheme as PaperDarkTheme,
-  MD3LightTheme as PaperDefaultTheme,
+  MD3LightTheme as PaperDefaultTheme
 } from 'react-native-paper';
 import {
   NavigationContainer,
@@ -26,7 +26,14 @@ const lightTheme: Theme = {
   colors: {
     ...NavigationDefaultTheme.colors,
     ...PaperDefaultTheme.colors,
+    primary: 'rgb(214 200 112)',
+    surface: 'rgb(214 200 112)',
+    onPrimary: 'rgb(55 49 0)',
+    primaryContainer: 'rgb(80 71 0)',
+    onPrimaryContainer: 'rgb(243 228 137)',
+    secondary: 'rgb(207 199 162)',
   },
+  roundness: 24,
 };
 
 const darkTheme: Theme = {
@@ -35,7 +42,14 @@ const darkTheme: Theme = {
   colors: {
     ...NavigationDarkTheme.colors,
     ...PaperDarkTheme.colors,
+    primary: '#d6c870',
+    surface: 'rgb(214, 200, 112)',
+    onPrimary: 'rgb(55, 49, 0)',
+    primaryContainer: 'rgb(80, 71, 0)',
+    onPrimaryContainer: 'rgb(243, 228, 137)',
+    secondary: 'rgb(207, 199, 162)',
   },
+  roundness: 24,
 };
 
 export type ThemeType = 'dark' | 'light';
@@ -77,8 +91,8 @@ export const ThemeContextProvider = ({children}: ThemeContextProviderProps) => {
   );
 
   return (
-    <NavigationContainer theme={theme}>
-      <PaperProvider theme={theme}>
+      // <PaperProvider theme={theme}>
+      <PaperProvider theme={PaperDarkTheme}>
         <ThemeContext.Provider
           value={{
             theme,
@@ -90,6 +104,5 @@ export const ThemeContextProvider = ({children}: ThemeContextProviderProps) => {
           {children}
         </ThemeContext.Provider>
       </PaperProvider>
-    </NavigationContainer>
   );
 };

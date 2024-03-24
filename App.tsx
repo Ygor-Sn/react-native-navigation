@@ -1,13 +1,23 @@
-import { MD3DarkTheme } from 'react-native-paper';
+import { MD3DarkTheme, MD3LightTheme } from 'react-native-paper';
 import { BottomNavigation } from './src/components/BottomNavigation';
-import { ThemeProvider } from 'react-native-paper';
+import {ThemeContextProvider, useTheme} from './src/context/ThemeContext';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppState } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
-      
+  const { themeType } = useTheme(); // Use o hook useTheme para obter o tipo de tema atual
+
   return (
-    <ThemeProvider theme={MD3DarkTheme}>
-      <BottomNavigation />
-    </ThemeProvider>
+    // Atribuir a theme a MD3DarkTheme no modo escuro, e MD3LightTheme no modo claro
+    <ThemeContextProvider>
+
+          <BottomNavigation />
+      
+      {/* Atribuir a style=light no modo escuro, e dark no modo claro */}
+      <StatusBar style={themeType === 'light' ? 'light' : 'dark'} />
+    </ThemeContextProvider>
   );
 }
 

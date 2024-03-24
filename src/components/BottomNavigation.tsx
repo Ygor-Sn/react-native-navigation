@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
 
-import Home from '../screens/Home';
+import Home from '../screens/SignIn';
 import Next from '../screens/Next';
 import Search from '../screens/Search';
 import Notifications from '../screens/Notifications';
@@ -24,7 +24,9 @@ const Tab = createMaterialBottomTabNavigator();
 export const BottomNavigation = () => {
   return (
   <NavigationContainer>
-    <Tab.Navigator>
+    <Tab.Navigator
+
+    >
       <Tab.Screen
         name="Home"
         component={Home}

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
-import { Button } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
+import { Button, Text } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
