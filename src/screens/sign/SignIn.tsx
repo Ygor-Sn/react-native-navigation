@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Icon, Text, Button, MD3Colors, TextInput } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Logo from '../icons/logo.svg';
+import Logo from '../../icons/logo.svg';
 
 
 const SignIn = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Logo width={150} height={150} style={styles.logo}/>
-      <Text>Entrar</Text>
+      <Text style={styles.txt_h1}>Entrar</Text>
       <TextInput
       mode="outlined"
       label="Email"
@@ -46,6 +46,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
+  },
+  txt_h1: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 16,
   },
   logo: {
     margin: 16,

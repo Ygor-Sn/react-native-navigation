@@ -16,7 +16,7 @@ const App = () => {
           <BottomNavigation />
       
       {/* Atribuir a style=light no modo escuro, e dark no modo claro */}
-      <StatusBar style={themeType === 'light' ? 'light' : 'dark'} />
+      <StatusBar style={themeType === 'dark' ? 'light' : 'dark'} />
     </ThemeContextProvider>
   );
 }
