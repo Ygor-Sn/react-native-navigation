@@ -4,12 +4,13 @@ import { Button, Text } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-const Home = () => {
+function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
         <Text>Home</Text>
-        <Button icon="camera">
+        <Button icon="camera" onPress={() => navigation.navigate('SignIn')}>
           Press me
+          
         </Button>
     </SafeAreaView>
   );

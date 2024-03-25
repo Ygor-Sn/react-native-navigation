@@ -20,5 +20,12 @@ const styles = StyleSheet.create({
   },
 });
 
+const test = () => {
+  return(
+  <SafeAreaView style={styles.container}>
+      <Text>test</Text>
+  </SafeAreaView>
+  )
+}
 
 export default Profile
