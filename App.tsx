@@ -5,7 +5,9 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppState } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import SignIn from './src/screens/sign/SignIn';
+//test import
+import SignIn from './src/screens/sign/SignUp';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const App = () => {
   const { themeType } = useTheme(); // Use o hook useTheme para obter o tipo de tema atual
@@ -20,16 +22,20 @@ const App = () => {
       <StatusBar style={themeType === 'dark' ? 'light' : 'dark'} />
     </ThemeContextProvider>
   );
+  (
+  <NavigationContainer>
+    <MyStack />
+  </NavigationContainer>
+);
 }
 
+const Stack = createNativeStackNavigator();
 
-//test
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+function MyStack() {
+  return (
+    <Stack.Navigator>r
+    </Stack.Navigator>
+  );
+}
 
-const mainNavigation = createStackNavigator({
-  SignIn,
-});
-
-export default createAppContainer(mainNavigation);
-
-
+export default App
